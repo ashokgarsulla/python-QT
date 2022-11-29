@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget,QToolButton,QPushButton
 
 import sys
 
@@ -14,8 +14,13 @@ class MainWindow(QMainWindow):
         self.input = QLineEdit()
         self.input.textChanged.connect(self.label.setText)
 
+        # self.button = QToolButton()
+        self.button = QPushButton("clear")
+        self.button.clicked.connect(self.input.clear)
+
         layout = QVBoxLayout()
         layout.addWidget(self.input)
+        layout.addWidget(self.button)
         layout.addWidget(self.label)
 
         container = QWidget()
