@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui,QWidget
+from PyQt5 import QtCore, QtGui
 
 class Window(QtGui.QWidget):
     customSignal = QtCore.pyqtSignal()
